@@ -38,7 +38,7 @@ class ChromeTest {
     @Test
     void test() {
 
-        driver.get("http://localhost:9999");
+        driver.get("http://localhost:7777");
         driver.findElement(By.cssSelector("[data-test-id='name'] input"))
                 .sendKeys("Андрей Максимов");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input"))
