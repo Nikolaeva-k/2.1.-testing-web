@@ -22,3 +22,5 @@ jobs:
         run: ./gradlew test --info
       - name: Wait for app
         run: sleep 15
+      - name: Show logs
+        run: cat log.txt
