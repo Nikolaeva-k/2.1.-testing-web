@@ -20,3 +20,5 @@ jobs:
         run: java -jar ./artifacts/app-order.jar &
       - name: Build with Gradle
         run: ./gradlew test --info
+      - name: Wait for app
+        run: sleep 15
