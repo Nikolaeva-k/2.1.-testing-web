@@ -27,6 +27,7 @@ class ChromeTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:7777");
     }
 
     @AfterEach
@@ -38,7 +39,6 @@ class ChromeTest {
     @Test
     void test() {
 
-        driver.get("http://localhost:7777");
         driver.findElement(By.cssSelector("[data-test-id='name'] input"))
                 .sendKeys("Андрей Максимов");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input"))
